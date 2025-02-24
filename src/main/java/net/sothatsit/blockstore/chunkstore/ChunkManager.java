@@ -36,8 +36,8 @@ import net.sothatsit.blockstore.util.Checks;
  */
 public class ChunkManager {
 
-    // TODO: Consider a minimum thread pool size equal to the number of cores.
-    private static final ExecutorService executor = Executors.newCachedThreadPool();
+    // TODO: Consider a minimum thread pool size equal to the number of cores. If New code works Delete this comment
+    private static final ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
     private final World world;
     private final NameStore nameStore;
